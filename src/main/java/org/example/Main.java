@@ -16,6 +16,15 @@ public class Main {
 
         //Display Menu
 
+        System.out.print("*******************");
+        System.out.println("Banking System");
+        System.out.print("*******************");
+        System.out.println("1. Show Balance");
+        System.out.println("2. Deposit");
+        System.out.println("3. Withdraw");
+        System.out.println("4. Exit");
+        System.out.print("*******************");
+
         //Get and Process User Choice
 
         //showBalance()
