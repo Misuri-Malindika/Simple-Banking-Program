@@ -36,7 +36,7 @@ public class Main {
                 case 2-> System.out.println("Deposit");
                 case 3-> System.out.println("Withdraw");
                 case 4-> isRunning = false;
-                default -> System.out.println("Invalid choice. Please try again.");
+                default -> System.out.println("Invalid choice.");
 
             }
 
