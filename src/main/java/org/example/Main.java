@@ -5,12 +5,11 @@ import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
         //Declaring variables
-
-        Scanner scanner = new Scanner(System.in);
-        double balance;
+        double balance= 0;
         boolean isRunning = true;
         int choice;
 
@@ -32,8 +31,8 @@ public class Main {
             choice = scanner.nextInt();
 
             switch (choice){
-                case 1-> System.out.println("Show Balance");
-                case 2-> System.out.println("Deposit");
+                case 1-> showBalance(balance);
+                case 2-> balance = balance + deposit();
                 case 3-> System.out.println("Withdraw");
                 case 4-> isRunning = false;
                 default -> System.out.println("Invalid choice.");
@@ -42,20 +41,29 @@ public class Main {
 
         }
 
-
-
-        //showBalance()
-
-        //deposit()
-
         //withdraw()
 
         //Exit Message
 
         scanner.close();
-
-
-
-
     }
+    //showBalance()
+   static void showBalance(double balance){
+       System.out.println("****************");
+        System.out.printf("$%.2f\n", balance);
+    }
+    //deposit()
+   static double deposit() {
+       double amount;
+
+       System.out.print("Enter amount to deposit: ");
+       amount = scanner.nextDouble();
+
+       if (amount <= 0) {
+           System.out.println("Amount can not be zero or negative.");
+           return amount;
+       } else {
+           return amount;
+       }
+   }
 }
